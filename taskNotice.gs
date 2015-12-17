@@ -16,8 +16,10 @@ function sendTask() {
     if (current_time > limit_time && (limit_time != 0)){
       var body = task["body"];
       var d = new Date(limit_time)
-      var msg = "Due: " + (d.getMonth()+1) + "/" + d.getDate() + d.getYear() + "\n";
+      var msg = "[info][title]期限切れタスク[/title]";
+      msg+ = "Due: " + (d.getMonth()+1) + "/" + d.getDate() + d.getYear() + "\n";
       msg += body;
+      msg += "[/info]"
       
       client.sendMessage({room_id: room_id, body: msg});
     }
