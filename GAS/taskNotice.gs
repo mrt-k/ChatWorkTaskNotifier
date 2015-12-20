@@ -17,7 +17,7 @@ function sendTask() {
       var body = task["body"];
       var d = new Date(limit_time)
       var msg = "[info][title]期限切れタスク[/title]";
-      msg+ = "Due: " + (d.getMonth()+1) + "/" + d.getDate() + d.getYear() + "\n";
+      msg += "Due: " + (d.getMonth()+1) + "/" + d.getDate() + d.getYear() + "\n";
       msg += body;
       msg += "[/info]"
       
